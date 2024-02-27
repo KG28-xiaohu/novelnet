@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.novelnet.demo.mapper.UserMapper">
+    <select id="login" resultType="User">
+        select uid, account, username, password from user where account = #{account} and password = #{password}
+    </select>
+
+    <select id="isHaveAccount" resultType="User">
+        select * from user where account = #{account}
+    </select>
+
+    <insert id="enroll">
+        insert into user values(null, account=#{user.account}, password=#{user.password}
+        <if test="user.username != null and user.username != ''">
+            , username=#{user.username}
+        </if>
+        <if test="user.email != null and user.email != ''">
+            , email=#{user.email}
+        </if>
+        <if test="user.sex != null and user.sex != ''">
+            , sex=#{user.sex}
+        </if>
+        <if test="user.qq != null and user.qq != ''">
+            , qq=#{user.qq}
+        </if>
+        <if test="user.personalWeb != null and user.personalWeb != ''">
+            , personal_web=#{user.personalWeb}
+        </if>
+        )
+    </insert>
+
+    <select id="getUserByAccountAndEmail" resultType="User">
+        select uid, account, username, password from user where account = #{account} and email = #{email}
+    </select>
+</mapper>
