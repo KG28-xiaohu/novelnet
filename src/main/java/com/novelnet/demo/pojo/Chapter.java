@@ -10,6 +10,7 @@ import lombok.ToString;
 @NoArgsConstructor
 @ToString
 public class Chapter {
+    private int bid;
     private int chapter_num;
     private String title;
     private String collect_time;

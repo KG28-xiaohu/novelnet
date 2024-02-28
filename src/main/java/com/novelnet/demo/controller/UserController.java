@@ -6,6 +6,8 @@ import com.novelnet.demo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
+
 @RestController
 @RequestMapping("/user")
 @CrossOrigin
@@ -19,8 +21,8 @@ public class UserController {
      * 状态码：200-成功， 401-用户名或密码错误
      */
     @PostMapping("/login")
-    public Result login(@RequestParam("account") String account, @RequestParam("password") String password){
-        String token = iUserService.login(account, password);
+    public Result login(@RequestParam("account") String account, @RequestParam("password") String password, HttpSession session){
+        String token = iUserService.login(account, password, session);
         if(token != null){
             return new Result(200, token, "LOGIN OK!!!");
         }

@@ -3,5 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.novelnet.demo.mapper.BookshelfMapper">
+    <insert id="addBook">
+        insert into bookshelf(uid, bid, collect_time) values (#{uid}, #{bid}, #{collectTime})
+    </insert>
 
+    <select id="isHaveBookshelf" resultType="Bookshelf">
+        select * from bookshelf where uid = #{uid} and bid = #{bid}
+    </select>
 </mapper>

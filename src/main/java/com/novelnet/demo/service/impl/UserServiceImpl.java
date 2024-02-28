@@ -7,6 +7,7 @@ import com.novelnet.demo.util.TokenUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,11 +17,12 @@ public class UserServiceImpl implements IUserService {
     private UserMapper userMapper;
 
     @Override
-    public String login(String account, String password) {
+    public String login(String account, String password, HttpSession session) {
         User user = userMapper.login(account, password);
         if (user != null){
             Map<String, Object> map = new HashMap<>();
             map.put("user", user);
+            session.setAttribute("user", user);
             return TokenUtil.makeToken(map);
         }
         return null;

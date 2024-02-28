@@ -1,4 +1,15 @@
 package com.novelnet.demo.mapper;
 
+import com.novelnet.demo.pojo.Book;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
+
 public interface BookMapper {
+    //获取图书类型
+    List<Book> getType();
+    //查所有图书
+    List<Book> getBooks(@Param("type") String type, @Param("name") String name);
+    //查图书详情
+    Book getBook(@Param("bid") int bid);
 }

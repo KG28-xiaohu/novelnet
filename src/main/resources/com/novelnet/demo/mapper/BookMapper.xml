@@ -3,5 +3,33 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.novelnet.demo.mapper.BookMapper">
+    <select id="getType" resultType="Book">
+        select distinct type from `book`
+    </select>
 
+    <select id="getBooks" resultType="Book">
+        select bid, name, author, update_time, introduction, state, type, recommend_num, collect_time, img_path
+        from `book`
+        <where>
+            <if test="type != null and type != ''">
+                type = #{type}
+            </if>
+            <if test="name != null and name != ''">
+                and name like %${name}%
+            </if>
+        </where>
+    </select>
+
+    <resultMap id="bookMap" type="Book">
+        <id property="bid" column="bid"/>
+        <collection property="chapters" javaType="List" ofType="Book">
+            <id property="bid" column="bid"/>
+        </collection>
+    </resultMap>
+
+    <select id="getBook" resultType="bookMap">
+        select *
+        from `book`
+        where bid = #{bid}
+    </select>
 </mapper>
