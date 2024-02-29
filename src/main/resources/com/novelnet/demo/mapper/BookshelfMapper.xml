@@ -7,7 +7,7 @@
         insert into bookshelf(uid, bid, collect_time) values (#{uid}, #{bid}, #{collectTime})
     </insert>
 
-    <select id="isHaveBookshelf" resultType="Bookshelf">
+    <select id="isHaveBookshelf" resultType="com.novelnet.demo.pojo.Bookshelf">
         select * from bookshelf where uid = #{uid} and bid = #{bid}
     </select>
 </mapper>

@@ -3,11 +3,11 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.novelnet.demo.mapper.BookMapper">
-    <select id="getType" resultType="Book">
+    <select id="getType" resultType="com.novelnet.demo.pojo.Book">
         select distinct type from `book`
     </select>
 
-    <select id="getBooks" resultType="Book">
+    <select id="getBooks" resultType="com.novelnet.demo.pojo.Book">
         select bid, name, author, update_time, introduction, state, type, recommend_num, collect_time, img_path
         from `book`
         <where>
@@ -20,14 +20,14 @@
         </where>
     </select>
 
-    <resultMap id="bookMap" type="Book">
+    <resultMap id="bookMap" type="com.novelnet.demo.pojo.Book">
         <id property="bid" column="bid"/>
-        <collection property="chapters" javaType="List" ofType="Book">
+        <collection property="chapters" javaType="List" ofType="com.novelnet.demo.pojo.Book">
             <id property="bid" column="bid"/>
         </collection>
     </resultMap>
 
-    <select id="getBook" resultType="bookMap">
+    <select id="getBook" resultMap="bookMap">
         select *
         from `book`
         where bid = #{bid}

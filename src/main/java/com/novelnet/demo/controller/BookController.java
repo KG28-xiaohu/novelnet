@@ -41,7 +41,7 @@ public class BookController {
      * 需要参数：bid-图书id
      * 返回值：200-成功
      */
-    @GetMapping("/getBooks")
+    @GetMapping("/getBook")
     public Result getBook(@RequestParam("bid") int bid){
         Book book = iBookService.getBook(bid);
         return new Result(200, book, "getBook OK!!!");
