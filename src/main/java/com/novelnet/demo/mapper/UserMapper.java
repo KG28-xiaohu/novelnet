@@ -7,7 +7,7 @@ public interface UserMapper {
     //登录
     User login(@Param("account") String account, @Param("password") String password);
     //验证账号存在
-    int isHaveAccount(@Param("account") String account);
+    User isHaveAccount(@Param("account") String account);
     //注册
     int enroll(@Param("user") User user);
     //找回密码

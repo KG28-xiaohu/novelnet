@@ -3,6 +3,7 @@ package com.novelnet.demo.service.impl;
 import com.novelnet.demo.mapper.UserMapper;
 import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
+import com.novelnet.demo.util.MD5Util;
 import com.novelnet.demo.util.TokenUtil;
 import org.springframework.stereotype.Service;
 
@@ -18,7 +19,8 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public String login(String account, String password, HttpSession session) {
-        User user = userMapper.login(account, password);
+        String newPassword = MD5Util.stringToMD5(password);
+        User user = userMapper.login(account, newPassword);
         if (user != null){
             Map<String, Object> map = new HashMap<>();
             map.put("user", user);
@@ -30,12 +32,15 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public int enroll(User user) {
-        int i1 = userMapper.isHaveAccount(user.getAccount());
-        if (i1 > 0){
+        User user1 = userMapper.isHaveAccount(user.getAccount());
+        if (user1 != null){
             return -1;
         }
-        int i2 = userMapper.enroll(user);
-        if (i2 == 0){
+        String password = user.getPassword();
+        String newPassword = MD5Util.stringToMD5(password);
+        user.setPassword(newPassword);
+        int i1 = userMapper.enroll(user);
+        if (i1 == 0){
             return 0;
         }
         return 1;

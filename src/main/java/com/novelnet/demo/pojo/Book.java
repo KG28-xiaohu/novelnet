@@ -21,6 +21,7 @@ public class Book {
     private String type;
     private String recommendNum;
     private String collectNum;
+    private String issuedTime;
     private List<Chapter> chapters;
 
     public int getBid() {
@@ -93,6 +94,14 @@ public class Book {
 
     public void setCollectNum(String collectNum) {
         this.collectNum = collectNum;
+    }
+
+    public String getIssuedTime() {
+        return issuedTime;
+    }
+
+    public void setIssuedTime(String issuedTime) {
+        this.issuedTime = issuedTime;
     }
 
     public List<Chapter> getChapters() {

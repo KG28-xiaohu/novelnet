@@ -20,12 +20,12 @@ public class TokenUtil {
      */
     public static String makeToken(Map<String, Object> claim){
         //设置过期时间
-        Date date = new Date(System.currentTimeMillis() + 1000*20);
+        Date date = new Date(System.currentTimeMillis() + 1000 * 60 * 60 * 24);
         //生成token
-        return Jwts.builder().setExpiration(date)   //自定义载荷（内容）
-                .setClaims(claim)   //设置过期时间
-                .signWith(SignatureAlgorithm.ES256, secret) //使用HS256算法和密钥
-                .compact();   //生成token
+        return Jwts.builder().setClaims(claim)
+                .setExpiration(date)
+                .signWith(SignatureAlgorithm.HS256, secret)
+                .compact();
     }
 
     /**
@@ -33,8 +33,6 @@ public class TokenUtil {
      */
     public static Claims parseToken(String token){
         //解析token的方法
-        return Jwts.parser().setSigningKey(secret)   //设置密钥
-                .parseClaimsJws(token)     //设置需要解析的token
-                .getBody();     //拿到载荷
+        return Jwts.parser().setSigningKey(secret).parseClaimsJws(token).getBody();
     }
 }

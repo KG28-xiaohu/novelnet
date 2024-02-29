@@ -2,11 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c63f43cb-82dd-484e-9420-3d9ad76a0163" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/util/MD5Util.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover14.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover19.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover20.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/img/cover9.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/util/TokenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/util/TokenUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookshelfMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookshelfMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/UserMapper.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,7 +107,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/img" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -99,9 +121,9 @@
     <property name="settings.editor.splitter.proportion" value="0.2190561" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="E:\KG28\KG28Code\novelnet\novelnet_demo\src\main\resources\static\sql" />
-      <recent name="E:\KG28\KG28Code\novelnet\novelnet_demo\src\main\resources\static" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\KG28\KG28Code\novelnet\novelnet_demo\src\main\resources\static\img" />
+      <recent name="E:\KG28\KG28Code\novelnet\novelnet_demo\src\main\java\com\novelnet\demo\pojo" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.novelnet.demo.controller" />
@@ -110,8 +132,9 @@
       <recent name="com.novelnet.demo.pojo" />
       <recent name="com.novelnet.demo.util" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\KG28\KG28Code\novelnet\novelnet_demo\src\main\java\com\novelnet\demo\pojo" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\KG28\KG28Code\novelnet\novelnet_demo\src\main\resources\static\sql" />
+      <recent name="E:\KG28\KG28Code\novelnet\novelnet_demo\src\main\resources\static" />
     </key>
   </component>
   <component name="RunManager">
@@ -160,7 +183,7 @@
       <workItem from="1709042970635" duration="698000" />
       <workItem from="1709101011477" duration="8788000" />
       <workItem from="1709171785429" duration="4058000" />
-      <workItem from="1709189341315" duration="340000" />
+      <workItem from="1709189341315" duration="7445000" />
     </task>
     <task id="LOCAL-00001" summary="day20240227_01">
       <created>1709043500093</created>
@@ -176,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709122238156</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="day20240229_01">
+      <created>1709189831018</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1709189831018</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -185,21 +215,22 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="day20240227_01" />
     <MESSAGE value="day20240228_01" />
-    <option name="LAST_COMMIT_MESSAGE" value="day20240228_01" />
+    <MESSAGE value="day20240229_01" />
+    <option name="LAST_COMMIT_MESSAGE" value="day20240229_01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="423" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1708953918342">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="423" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1708953918342" />
-    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1709121738418">
+    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1709205040965">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1709121738418" />
-    <state x="266" y="0" key="CommitChangelistDialog2" timestamp="1709122236636">
+    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1709205040965" />
+    <state x="266" y="0" key="CommitChangelistDialog2" timestamp="1709189829142">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="266" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1709122236636" />
+    <state x="266" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1709189829142" />
     <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1709187619336">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -212,38 +243,42 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="507" y="110" key="Github.UntrackedFilesDialog/0.0.1536.816@0.0.1536.816" timestamp="1709042091597" />
-    <state width="1152" height="334" key="GridCell.Tab.0.bottom" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.0.bottom" timestamp="1709205397571">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
-    <state width="1152" height="334" key="GridCell.Tab.0.center" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709205397571" />
+    <state width="1408" height="229" key="GridCell.Tab.0.center" timestamp="1709205397571">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
-    <state width="1152" height="334" key="GridCell.Tab.0.left" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1709205397571" />
+    <state width="1408" height="229" key="GridCell.Tab.0.left" timestamp="1709205397571">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
-    <state width="1152" height="334" key="GridCell.Tab.0.right" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1709205397571" />
+    <state width="1408" height="229" key="GridCell.Tab.0.right" timestamp="1709205397571">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
-    <state width="1152" height="334" key="GridCell.Tab.1.bottom" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1709205397571" />
+    <state width="1408" height="229" key="GridCell.Tab.1.bottom" timestamp="1709205397572">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
-    <state width="1152" height="334" key="GridCell.Tab.1.center" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1709205397572" />
+    <state width="1408" height="229" key="GridCell.Tab.1.center" timestamp="1709205397572">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
-    <state width="1152" height="334" key="GridCell.Tab.1.left" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1709205397572" />
+    <state width="1408" height="229" key="GridCell.Tab.1.left" timestamp="1709205397572">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
-    <state width="1152" height="334" key="GridCell.Tab.1.right" timestamp="1709189807508">
+    <state width="1408" height="229" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1709205397572" />
+    <state width="1408" height="229" key="GridCell.Tab.1.right" timestamp="1709205397572">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1152" height="334" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1709189807508" />
+    <state width="1408" height="229" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1709205397572" />
+    <state x="290" y="142" key="IDE.errors.dialog" timestamp="1709195738211">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="290" y="142" key="IDE.errors.dialog/0.0.1536.816@0.0.1536.816" timestamp="1709195738211" />
     <state x="408" y="106" key="NewModule_or_Project.wizard" timestamp="1709042693262">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -256,10 +291,10 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="270" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1709176632024" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1709186604175">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1709189872098">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1709186604175" />
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1709189872098" />
     <state x="449" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1709171786350">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
