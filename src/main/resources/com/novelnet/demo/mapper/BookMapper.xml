@@ -27,9 +27,10 @@
         </collection>
     </resultMap>
 
+<!--    inner join `chapter` c on c.bid = b.bid-->
     <select id="getBook" resultMap="bookMap">
         select *
-        from `book`
-        where bid = #{bid}
+        from `book` b
+        where b.bid = #{bid}
     </select>
 </mapper>

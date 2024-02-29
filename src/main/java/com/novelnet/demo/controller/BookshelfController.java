@@ -23,7 +23,7 @@ public class BookshelfController {
      * 需要参数：bid-图书id
      * 返回值：201-添加成功、400-添加失败（重复添加）
      */
-    @PutMapping("/addBook")
+    @PutMapping("/token/addBook")
     public Result addBook(HttpSession session, int bid){
         User user = (User)session.getAttribute("user");
         int i = iBookshelfService.addBook(user.getUid(), bid);

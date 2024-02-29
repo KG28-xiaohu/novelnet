@@ -11,7 +11,7 @@ public class WebSupport extends WebMvcConfigurationSupport {
     @Override
     protected void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(new LoginInterceptor())
-                .addPathPatterns("/user/afterLogin/**","/book/**","/bookshelf/**","/chapter/**");
+                .addPathPatterns("/user/token/**","/book/token/**","/bookshelf/token/**","/chapter/token/**");
     }
 
     @Override

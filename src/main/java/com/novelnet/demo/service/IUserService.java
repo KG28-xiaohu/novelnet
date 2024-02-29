@@ -1,6 +1,7 @@
 package com.novelnet.demo.service;
 
 import com.novelnet.demo.pojo.User;
+import org.apache.ibatis.annotations.Param;
 
 import javax.servlet.http.HttpSession;
 
@@ -11,4 +12,6 @@ public interface IUserService {
     int enroll(User user);
     //找回密码
     String getPassword(String account, String email);
+    //修改密码
+    int updatePassword(int uid, String password, String newPassword);
 }

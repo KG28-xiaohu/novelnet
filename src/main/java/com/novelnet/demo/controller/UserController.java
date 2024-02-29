@@ -5,6 +5,7 @@ import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import sun.security.pkcs11.Secmod;
 
 import javax.servlet.http.HttpSession;
 
@@ -21,7 +22,7 @@ public class UserController {
      * 状态码：200-成功， 401-用户名或密码错误
      */
     @PostMapping("/login")
-    public Result login(@RequestParam("account") String account, @RequestParam("password") String password, HttpSession session){
+    public Result login(String account, String password, HttpSession session){
         String token = iUserService.login(account, password, session);
         if(token != null){
             return new Result(200, token, "LOGIN OK!!!");
@@ -49,14 +50,21 @@ public class UserController {
     /**
      * 找回密码方法，返回密码字符串
      * 需要参数：account-账号、email-邮箱
-     * 200-成功，返回旧密码、404-失败，用户名邮箱或许错误
+     * 200-成功，允许进行修改、404-失败，用户名或邮箱错误
      */
     @PostMapping("/retrievePassword")
-    public Result retrievePassword(@RequestParam("account") String account, @RequestParam("email") String email){
+    public Result retrievePassword(String account, String email){
         String password = iUserService.getPassword(account, email);
         if (password == null){
             return new Result(404, null, "retrievePassword ERROR: 请检查用户名邮箱是否正确");
         }
-        return new Result(200, password, "retrievePassword OK!!!");
+        return new Result(200, null, "retrievePassword OK!!!");
     }
+
+//    @PostMapping("/token/updatePassword")
+//    public Result updatePassword(String password, String newPassword, HttpSession session){
+//
+//        User user = (User)session.getAttribute("user");
+//        iUserService.updatePassword(user.getUid(), password, newPassword);
+//    }
 }

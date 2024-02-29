@@ -20,4 +20,8 @@
     <select id="getUserByAccountAndEmail" resultType="com.novelnet.demo.pojo.User">
         select uid, account, username, password from user where account = #{account} and email = #{email}
     </select>
+
+    <update id="updatePassword">
+        update `user` set password = #{newPassword} where uid = #{uid}
+    </update>
 </mapper>
