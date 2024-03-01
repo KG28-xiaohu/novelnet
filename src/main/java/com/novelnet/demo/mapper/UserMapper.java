@@ -4,7 +4,7 @@ import com.novelnet.demo.pojo.User;
 import org.apache.ibatis.annotations.Param;
 
 public interface UserMapper {
-//    User getUserById()
+    User getUserById(@Param("uid") int uid);
     //登录
     User login(@Param("account") String account, @Param("password") String password);
     //验证账号存在

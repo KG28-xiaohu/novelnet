@@ -10,4 +10,8 @@
     <select id="isHaveBookshelf" resultType="com.novelnet.demo.pojo.Bookshelf">
         select * from bookshelf where uid = #{uid} and bid = #{bid}
     </select>
+
+    <delete id="deleteBook">
+        delete from bookshelf where uid = #{uid} and bid = #{bid}
+    </delete>
 </mapper>

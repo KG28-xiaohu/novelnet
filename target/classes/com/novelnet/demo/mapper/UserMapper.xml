@@ -24,4 +24,10 @@
     <update id="updatePassword">
         update `user` set password = #{newPassword} where uid = #{uid}
     </update>
+
+    <select id="getUserById" resultType="com.novelnet.demo.pojo.User">
+        select *
+        from `user`
+        where uid = #{uid}
+    </select>
 </mapper>

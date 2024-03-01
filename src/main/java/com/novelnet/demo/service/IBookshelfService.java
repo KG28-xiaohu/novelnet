@@ -4,4 +4,5 @@ import javax.servlet.http.HttpSession;
 
 public interface IBookshelfService {
     int addBook(int uid, int bid);
+    int delBook(int uid, int bid);
 }

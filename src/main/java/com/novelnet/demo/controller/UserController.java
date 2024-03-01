@@ -61,10 +61,16 @@ public class UserController {
         return new Result(200, null, "retrievePassword OK!!!");
     }
 
-//    @PostMapping("/token/updatePassword")
-//    public Result updatePassword(String password, String newPassword, HttpSession session){
-//
-//        User user = (User)session.getAttribute("user");
-//        iUserService.updatePassword(user.getUid(), password, newPassword);
-//    }
+    /**
+     * 修改密码的方法（需要登录以后）
+     * 需要参数：password-原密码、newPassword-新密码
+     * 200-修改密码成功、400-修改密码失败，原密码错误
+     */
+    @PostMapping("/token/updatePassword")
+    public Result updatePassword(String password, String newPassword, HttpSession session){
+        User user = (User)session.getAttribute("user");
+        return iUserService.updatePassword(user.getUid(), password, newPassword) > 0 ?
+                new Result(200, null, "updatePassword OK!!!") :
+                new Result(400, null, "updatePassword ERROR: 原密码错误");
+    }
 }

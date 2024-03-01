@@ -58,7 +58,10 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public int updatePassword(int uid, String password, String newPassword) {
-
+        User user = userMapper.getUserById(uid);
+        if (!MD5Util.stringToMD5(password).equals(user.getPassword())) {
+            return -1;
+        }
         return userMapper.updatePassword(uid, newPassword);
     }
 }

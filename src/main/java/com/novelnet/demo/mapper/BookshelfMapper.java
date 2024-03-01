@@ -8,4 +8,6 @@ public interface BookshelfMapper {
     int addBook(@Param("uid") int uid, @Param("bid") int bid, @Param("collectTime") String collectTime);
     //判断图书是否存在
     Bookshelf isHaveBookshelf(@Param("uid") int uid, @Param("bid") int bid);
+    //删除收藏图书
+    int deleteBook(@Param("uid") int uid, @Param("bid") int bid);
 }
