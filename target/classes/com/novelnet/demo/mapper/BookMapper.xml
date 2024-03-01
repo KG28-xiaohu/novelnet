@@ -22,15 +22,38 @@
 
     <resultMap id="bookMap" type="com.novelnet.demo.pojo.Book">
         <id property="bid" column="bid"/>
-        <collection property="chapters" javaType="List" ofType="com.novelnet.demo.pojo.Book">
-            <id property="bid" column="bid"/>
+        <collection property="chapters" javaType="List" ofType="com.novelnet.demo.pojo.Chapter">
+            <id property="cid" column="cid"/>
         </collection>
     </resultMap>
+<!--    <resultMap id="bookMap" type="com.novelnet.demo.pojo.Book">-->
+<!--        <id property="bid" column="bid"/>-->
+<!--        <result property="name" column="name"/>-->
+<!--        <result property="author" column="author"/>-->
+<!--        <result property="updateTime" column="update_time"/>-->
+<!--        <result property="introduction" column="introduction"/>-->
+<!--        <result property="state" column="state"/>-->
+<!--        <result property="type" column="type"/>-->
+<!--        <result property="recommendNum" column="recommend_num"/>-->
+<!--        <result property="collectNum" column="collect_num"/>-->
+<!--        <result property="issuedTime" column="issued_time"/>-->
+<!--        <result property="imgPath" column="img_path"/>-->
+<!--        <collection property="chapters" javaType="List" ofType="com.novelnet.demo.pojo.Chapter" resultMap="chapterMap"/>-->
+<!--    </resultMap>-->
 
-<!--    inner join `chapter` c on c.bid = b.bid-->
+<!--    <resultMap id="chapterMap" type="com.novelnet.demo.pojo.Chapter">-->
+<!--        <id property="cid" column="cid"/>-->
+<!--        <result property="bid" column="cbid"/>-->
+<!--        <result property="chapterNum" column="chapter_num"/>-->
+<!--        <result property="title" column="title"/>-->
+<!--        <result property="content" column="content"/>-->
+<!--    </resultMap>-->
+
     <select id="getBook" resultMap="bookMap">
-        select *
+        select b.bid, b.name, b.author, b.update_time, b.introduction, b.state, b.type, b.recommend_num, b.collect_num, b.issued_time, b.img_path,
+        c.cid, c.bid as cbid, c.chapter_num, c.title, c.content
         from `book` b
+        inner join `chapter` c on c.bid = b.bid
         where b.bid = #{bid}
     </select>
 </mapper>
