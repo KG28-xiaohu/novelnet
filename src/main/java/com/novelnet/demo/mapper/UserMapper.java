@@ -15,4 +15,8 @@ public interface UserMapper {
     User getUserByAccountAndEmail(@Param("account") String account, @Param("email") String email);
     //修改密码
     int updatePassword(@Param("uid") int uid, @Param("newPassword") String newPassword);
+    //获取用户信息（除密码
+    User getUserNoPassword(@Param("uid") int uid);
+    //修改用户信息
+    int updateUser(@Param("user") User user);
 }

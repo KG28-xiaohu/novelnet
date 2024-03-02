@@ -14,4 +14,8 @@ public interface IUserService {
     String getPassword(String account, String email);
     //修改密码
     int updatePassword(int uid, String password, String newPassword);
+    //获取登录用户的个人信息
+    User getUserNoPassword(int uid);
+    //修改用户信息
+    int updateUser(User user);
 }

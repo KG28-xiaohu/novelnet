@@ -1,6 +1,5 @@
 package com.novelnet.demo.service.impl;
 
-import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.novelnet.demo.mapper.UserMapper;
 import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
@@ -63,5 +62,15 @@ public class UserServiceImpl implements IUserService {
             return -1;
         }
         return userMapper.updatePassword(uid, newPassword);
+    }
+
+    @Override
+    public User getUserNoPassword(int uid) {
+        return userMapper.getUserNoPassword(uid);
+    }
+
+    @Override
+    public int updateUser(User user) {
+        return userMapper.updateUser(user);
     }
 }

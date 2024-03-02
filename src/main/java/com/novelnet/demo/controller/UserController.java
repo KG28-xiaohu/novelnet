@@ -73,4 +73,28 @@ public class UserController {
                 new Result(200, null, "updatePassword OK!!!") :
                 new Result(400, null, "updatePassword ERROR: 原密码错误");
     }
+
+    /**
+     * 获取用户详细信息
+     * 无需参数；但需要登录以后
+     * 200-获取成功
+     */
+    @GetMapping("/token/getUser")
+    public Result getUserNoPassword(HttpSession session){
+        User user = (User)session.getAttribute("user");
+        return new Result(200, iUserService.getUserNoPassword(user.getUid()), "getUser OK!!!");
+    }
+
+    /**
+     * 修改用户信息
+     * 需要修改完成以后的用户作为参数，传参类型为JSON
+     * 200-修改成功，400-修改失败
+     */
+    @PutMapping("updateUser")
+    public Result updateUser(HttpSession session, @RequestBody User user){
+        user.setUid(((User)session.getAttribute("user")).getUid());
+        return iUserService.updateUser(user) > 0 ?
+                new Result(200, null, "updateUser OK!!!") :
+                new Result(400, null, "updateUser ERROR: 修改失败");
+    }
 }
