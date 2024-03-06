@@ -37,6 +37,7 @@ public class UserController {
      */
     @PostMapping("/enroll")
     public Result enroll(@RequestBody User user){
+        user.setUsername(user.getAccount());
         int i = iUserService.enroll(user);
         if(i == 1){
             return new Result(201, null, "ENROLL OK!!!");
