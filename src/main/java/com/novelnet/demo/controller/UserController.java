@@ -3,11 +3,9 @@ package com.novelnet.demo.controller;
 import com.novelnet.demo.pojo.Result;
 import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
-import com.novelnet.demo.util.MD5Util;
 import com.novelnet.demo.util.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import sun.security.pkcs11.Secmod;
 
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
