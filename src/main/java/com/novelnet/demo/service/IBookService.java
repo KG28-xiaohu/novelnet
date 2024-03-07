@@ -8,7 +8,7 @@ public interface IBookService {
     //获取图书类型
     List<String> getType();
     //获取图书
-    List<Book> getBooks(String type, String name);
+    List<Book> getBooks(String type, String name, int num);
     //获取图书详情
     Book getBook(int bid);
 }

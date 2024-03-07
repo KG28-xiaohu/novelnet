@@ -27,12 +27,12 @@ public class BookController {
 
     /**
      * 获取图书的方法
-     * 需要参数：type-类型（选填）、name-书名（选填）（传递x-www-form-urlencoded类型数据，通过请求头设置）
+     * 需要参数：type-类型（选填）、name-书名（选填）、num-获取书的数量（小于零获取全部）（传递x-www-form-urlencoded类型数据，通过请求头设置）
      * 返回值：200-成功
      */
     @GetMapping("/getBooks")
-    public Result getBooks(String type, String name){
-        List<Book> books = iBookService.getBooks(type, name);
+    public Result getBooks(String type, String name, int num){
+        List<Book> books = iBookService.getBooks(type, name, num);
         return new Result(200, books, "getBooks OK!!!");
     }
 

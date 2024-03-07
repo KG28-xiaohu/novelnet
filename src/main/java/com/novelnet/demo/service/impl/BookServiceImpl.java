@@ -22,8 +22,12 @@ public class BookServiceImpl implements IBookService {
     }
 
     @Override
-    public List<Book> getBooks(String type, String name) {
-        return bookMapper.getBooks(type, name);
+    public List<Book> getBooks(String type, String name, int num) {
+        List<Book> bookList = bookMapper.getBooks(type, name);
+        if (num < 0 || bookList.size() <= num) {
+            return bookList;
+        }
+        return bookList.stream().limit(num).collect(Collectors.toList());
     }
 
     @Override
