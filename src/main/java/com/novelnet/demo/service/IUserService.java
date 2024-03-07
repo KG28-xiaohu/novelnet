@@ -7,7 +7,7 @@ import javax.servlet.http.HttpSession;
 
 public interface IUserService {
     //登录
-    String login(String account, String password, HttpSession session);
+    User login(String account, String password);
     //注册
     int enroll(User user);
     //找回密码

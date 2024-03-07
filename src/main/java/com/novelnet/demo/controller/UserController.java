@@ -3,11 +3,15 @@ package com.novelnet.demo.controller;
 import com.novelnet.demo.pojo.Result;
 import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
+import com.novelnet.demo.util.MD5Util;
+import com.novelnet.demo.util.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import sun.security.pkcs11.Secmod;
 
 import javax.servlet.http.HttpSession;
+import java.util.HashMap;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/user")
@@ -22,9 +26,12 @@ public class UserController {
      * 状态码：200-成功， 401-用户名或密码错误
      */
     @PostMapping("/login")
-    public Result login(String account, String password, HttpSession session){
-        String token = iUserService.login(account, password, session);
-        if(token != null){
+    public Result login(String account, String password){
+        User user = iUserService.login(account, password);
+        if (user != null) {
+            Map<String, Object> map = new HashMap<>();
+            map.put("user", user);
+            String token = TokenUtil.makeToken(map);
             return new Result(200, token, "LOGIN OK!!!");
         }
         return new Result(401, null, "LOGIN ERROR: 用户名或密码错误");
@@ -77,13 +84,16 @@ public class UserController {
 
     /**
      * 获取用户详细信息
-     * 无需参数；但需要登录以后
+     * 需要参数：account-账号、password-密码
      * 200-获取成功
      */
-    @GetMapping("/token/getUser")
-    public Result getUserNoPassword(HttpSession session){
-        User user = (User)session.getAttribute("user");
-        return new Result(200, iUserService.getUserNoPassword(user.getUid()), "getUser OK!!!");
+    @PostMapping("/token/getUser")
+    public Result getUserByAccount(String account, String password){
+        User user = iUserService.login(account, password);
+        if (user != null) {
+            return new Result(200, user, "LOGIN OK!!!");
+        }
+        return new Result(401, null, "LOGIN ERROR: 用户名或密码错误");
     }
 
     /**

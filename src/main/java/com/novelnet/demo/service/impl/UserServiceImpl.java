@@ -1,12 +1,11 @@
 package com.novelnet.demo.service.impl;
-
 import com.novelnet.demo.mapper.UserMapper;
 import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
 import com.novelnet.demo.util.MD5Util;
 import com.novelnet.demo.util.TokenUtil;
+import jdk.nashorn.internal.objects.NativeJSON;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.Resource;
 import javax.servlet.http.HttpSession;
 import java.util.HashMap;
@@ -18,16 +17,9 @@ public class UserServiceImpl implements IUserService {
     private UserMapper userMapper;
 
     @Override
-    public String login(String account, String password, HttpSession session) {
+    public User login(String account, String password) {
         String newPassword = MD5Util.stringToMD5(password);
-        User user = userMapper.login(account, newPassword);
-        if (user != null){
-            Map<String, Object> map = new HashMap<>();
-            map.put("user", user);
-            session.setAttribute("user", user);
-            return TokenUtil.makeToken(map);
-        }
-        return null;
+        return userMapper.login(account, newPassword);
     }
 
     @Override
