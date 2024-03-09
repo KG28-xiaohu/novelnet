@@ -4,6 +4,7 @@ import com.novelnet.demo.mapper.BookMapper;
 import com.novelnet.demo.pojo.Book;
 import com.novelnet.demo.pojo.Result;
 import com.novelnet.demo.service.IBookService;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -33,5 +34,20 @@ public class BookServiceImpl implements IBookService {
     @Override
     public Book getBook(int bid) {
         return bookMapper.getBook(bid);
+    }
+
+    @Override
+    public int addRecommendNum(int bid, int num) {
+        return bookMapper.addRecommendNum(bid, num);
+    }
+
+    @Override
+    public int addLoveNum(int bid,int num) {
+        return bookMapper.addLoveNum(bid, num);
+    }
+
+    @Override
+    public int addCollectNum(int bid, int num) {
+        return bookMapper.addCollectNum(bid, num);
     }
 }

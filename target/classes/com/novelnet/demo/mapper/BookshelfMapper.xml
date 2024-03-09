@@ -14,4 +14,23 @@
     <delete id="deleteBook">
         delete from bookshelf where uid = #{uid} and bid = #{bid}
     </delete>
+
+    <resultMap id="bookshelfMap" type="com.novelnet.demo.pojo.Bookshelf">
+        <association property="user" javaType="com.novelnet.demo.pojo.User">
+            <id property="uid" column="bsuid"/>
+        </association>
+        <association property="book" javaType="com.novelnet.demo.pojo.Book">
+            <id property="bid" column="bsbid"/>
+        </association>
+    </resultMap>
+
+    <select id="getBookshelfByUid" resultMap="bookshelfMap">
+        select bs.uid bsuid, bs.bid bsbid, collect_time, last_chapter,
+        b.bid, b.name, b.author, b.update_time, b.introduction, b.state,
+        b.type, b.recommend_num, b.collect_num, b.issued_time, b.img_path, b.love_num
+        from bookshelf bs
+        left join user u on bs.bid = u.uid
+        left join book b on bs.bid = b.bid
+        where bs.uid = #{uid}
+    </select>
 </mapper>

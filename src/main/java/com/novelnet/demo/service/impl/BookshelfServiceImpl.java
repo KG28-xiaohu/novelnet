@@ -1,11 +1,13 @@
 package com.novelnet.demo.service.impl;
 
 import com.novelnet.demo.mapper.BookshelfMapper;
+import com.novelnet.demo.pojo.Bookshelf;
 import com.novelnet.demo.service.IBookshelfService;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class BookshelfServiceImpl implements IBookshelfService {
@@ -18,7 +20,6 @@ public class BookshelfServiceImpl implements IBookshelfService {
             return -1;
         }
         LocalDateTime time = LocalDateTime.now();
-        System.out.println(time);
         return bookshelfMapper.addBook(uid, bid, time.toString());
     }
 
@@ -28,5 +29,15 @@ public class BookshelfServiceImpl implements IBookshelfService {
             return -1;
         }
         return bookshelfMapper.deleteBook(uid, bid);
+    }
+
+    @Override
+    public List<Bookshelf> getBookshelfByUid(int uid) {
+        return bookshelfMapper.getBookshelfByUid(uid);
+    }
+
+    @Override
+    public boolean isHaveBookshelf(int uid, int bid) {
+        return bookshelfMapper.isHaveBookshelf(uid, bid) != null;
     }
 }

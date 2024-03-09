@@ -7,7 +7,6 @@ import com.novelnet.demo.util.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -69,13 +68,12 @@ public class UserController {
 
     /**
      * 修改密码的方法（需要登录以后）
-     * 需要参数：password-原密码、newPassword-新密码
+     * 需要参数：uid-用户id、password-原密码、newPassword-新密码
      * 200-修改密码成功、400-修改密码失败，原密码错误
      */
     @PostMapping("/token/updatePassword")
-    public Result updatePassword(String password, String newPassword, HttpSession session){
-        User user = (User)session.getAttribute("user");
-        return iUserService.updatePassword(user.getUid(), password, newPassword) > 0 ?
+    public Result updatePassword(int uid, String password, String newPassword){
+        return iUserService.updatePassword(uid, password, newPassword) > 0 ?
                 new Result(200, null, "updatePassword OK!!!") :
                 new Result(400, null, "updatePassword ERROR: 原密码错误");
     }
@@ -100,8 +98,8 @@ public class UserController {
      * 200-修改成功，400-修改失败
      */
     @PutMapping("updateUser")
-    public Result updateUser(HttpSession session, @RequestBody User user){
-        user.setUid(((User)session.getAttribute("user")).getUid());
+    public Result updateUser(int uid, @RequestBody User user){
+        user.setUid(uid);
         return iUserService.updateUser(user) > 0 ?
                 new Result(200, null, "updateUser OK!!!") :
                 new Result(400, null, "updateUser ERROR: 修改失败");

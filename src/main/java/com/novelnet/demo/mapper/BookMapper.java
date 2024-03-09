@@ -12,4 +12,8 @@ public interface BookMapper {
     List<Book> getBooks(@Param("type") String type, @Param("name") String name);
     //查图书详情
     Book getBook(@Param("bid") int bid);
+    //增加推荐数，点赞数,收藏数
+    int addRecommendNum(@Param("bid") int bid, @Param("num") int num);
+    int addLoveNum(@Param("bid") int bid, @Param("num") int num);
+    int addCollectNum(@Param("bid") int bid, @Param("num") int num);
 }

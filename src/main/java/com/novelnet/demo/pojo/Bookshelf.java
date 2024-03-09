@@ -13,4 +13,5 @@ public class Bookshelf {
     private User user;
     private Book book;
     private String collectTime;
+    private int lastChapter;
 }

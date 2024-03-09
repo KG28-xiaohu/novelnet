@@ -46,4 +46,17 @@ public class BookController {
         Book book = iBookService.getBook(bid);
         return new Result(200, book, "getBook OK!!!");
     }
+
+    /**
+     * 给书籍点赞
+     * @param bid
+     * @return
+     */
+    @PutMapping("/token/thumbsUp")
+    public Result thumbsUp(@RequestParam("bid") int bid){
+        iBookService.addRecommendNum(bid, 5);
+        return iBookService.addLoveNum(bid, 1) > 0 ?
+                new Result(200, null, "OK") :
+                new Result(400, null, "ERROR");
+    }
 }

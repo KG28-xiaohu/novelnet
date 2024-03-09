@@ -1,12 +1,13 @@
 package com.novelnet.demo.controller;
 
+import com.novelnet.demo.pojo.Bookshelf;
 import com.novelnet.demo.pojo.Result;
-import com.novelnet.demo.pojo.User;
+import com.novelnet.demo.service.IBookService;
 import com.novelnet.demo.service.IBookshelfService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.http.HttpSession;
+import java.util.List;
 
 @RestController
 @RequestMapping("/bookshelf")
@@ -15,17 +16,24 @@ public class BookshelfController {
     @Autowired
     private IBookshelfService iBookshelfService;
 
+    @Autowired
+    private IBookService iBookService;
+
     /**
      * 收藏图书的方法
-     * 需要参数：bid-图书id（params传参）
-     * 返回值：201-添加成功、400-添加失败（重复添加）
+     * 需要参数：bid-图书id
+     * 返回值：201-添加成功、400-添加失败、403-重复收藏
      */
-    @PutMapping("/token/addBook")
-    public Result addBook(HttpSession session, int bid){
-        User user = (User)session.getAttribute("user");
-        return iBookshelfService.addBook(user.getUid(), bid) < 0 ?
-                new Result(400, null, "addBook ERROR: 重复收藏") :
-                new Result(201, null, "addBook OK!!!");
+    @PostMapping("/token/addBook")
+    public Result addBook(@RequestParam("uid") int uid, @RequestParam("bid") int bid){
+        iBookService.addCollectNum(bid, 1);
+        iBookService.addRecommendNum(bid, 10);
+        if(iBookshelfService.isHaveBookshelf(uid, bid)){
+            return new Result(403, null, "addBook ERROR: 重复收藏");
+        }
+        return iBookshelfService.addBook(uid, bid) > 0 ?
+                new Result(201, null, "addBook OK!!!") :
+                new Result(400, null, "addBook ERROR: 收藏失败");
     }
 
     /**
@@ -34,10 +42,24 @@ public class BookshelfController {
      * 返回值：200-移除成功、400-移除失败（重复添加）
      */
     @DeleteMapping("/token/delBook")
-    public Result delBook(HttpSession session, int bid){
-        User user = (User)session.getAttribute("user");
-        return iBookshelfService.delBook(user.getUid(), bid) < 0 ?
-                new Result(400, null, "delBook ERROR: 删除失败") :
-                new Result(200, null, "delBook OK!!!");
+    public Result delBook(int uid, int bid){
+        iBookService.addCollectNum(bid, -1);
+        iBookService.addRecommendNum(bid, -5);
+        return iBookshelfService.delBook(uid, bid) > 0 ?
+                new Result(200, null, "delBook OK!!!") :
+                new Result(400, null, "delBook ERROR: 删除失败");
+    }
+
+    /**
+     * 获取书籍详情
+     * @param uid
+     * @return
+     */
+    @GetMapping("/token/getBookshelfByUid")
+    public Result getBookshelfByUid(int uid){
+        List<Bookshelf> bookshelfList = iBookshelfService.getBookshelfByUid(uid);
+        return bookshelfList == null ?
+                new Result(400, null, "getBookshelfByUid ERROR") :
+                new Result(200, bookshelfList, "getBookshelfByUid OK!!!");
     }
 }

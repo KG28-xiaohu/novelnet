@@ -35,4 +35,19 @@
         inner join `chapter` c on c.bid = b.bid
         where b.bid = #{bid}
     </select>
+
+    <update id="addRecommendNum">
+        update book set recommend_num = recommend_num + ${num}
+        where bid = #{bid}
+    </update>
+
+    <update id="addLoveNum">
+        update book set love_num = love_num + ${num}
+        where bid = #{bid}
+    </update>
+
+    <update id="addCollectNum">
+        update book set collect_num = collect_num + ${num}
+        where bid = #{bid}
+    </update>
 </mapper>

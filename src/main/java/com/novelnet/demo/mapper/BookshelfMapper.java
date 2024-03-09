@@ -3,6 +3,8 @@ package com.novelnet.demo.mapper;
 import com.novelnet.demo.pojo.Bookshelf;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 public interface BookshelfMapper {
     //收藏图书
     int addBook(@Param("uid") int uid, @Param("bid") int bid, @Param("collectTime") String collectTime);
@@ -10,4 +12,6 @@ public interface BookshelfMapper {
     Bookshelf isHaveBookshelf(@Param("uid") int uid, @Param("bid") int bid);
     //删除收藏图书
     int deleteBook(@Param("uid") int uid, @Param("bid") int bid);
+    //查看收藏的图书
+    List<Bookshelf> getBookshelfByUid(@Param("uid") int uid);
 }
