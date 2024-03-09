@@ -42,7 +42,7 @@ public class BookshelfController {
      * 返回值：200-移除成功、400-移除失败（重复添加）
      */
     @DeleteMapping("/token/delBook")
-    public Result delBook(int uid, int bid){
+    public Result delBook(@RequestParam("uid") int uid, @RequestParam("bid") int bid){
         iBookService.addCollectNum(bid, -1);
         iBookService.addRecommendNum(bid, -5);
         return iBookshelfService.delBook(uid, bid) > 0 ?
