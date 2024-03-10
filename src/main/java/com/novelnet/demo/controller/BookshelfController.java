@@ -62,4 +62,12 @@ public class BookshelfController {
                 new Result(400, null, "getBookshelfByUid ERROR") :
                 new Result(200, bookshelfList, "getBookshelfByUid OK!!!");
     }
+
+    @GetMapping("/token/getBookshelf")
+    public Result getBookshelf(int uid, int bid){
+        Bookshelf bookshelf = iBookshelfService.getBookshelf(uid, bid);
+        return bookshelf != null ?
+                new Result(200, bookshelf, "OK") :
+                new Result(400, null, "ERROR");
+    }
 }

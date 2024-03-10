@@ -33,4 +33,20 @@
         left join book b on bs.bid = b.bid
         where bs.uid = #{uid}
     </select>
+
+    <select id="getBookshelf" resultMap="bookshelfMap">
+        select bs.uid bsuid, bs.bid bsbid, collect_time, last_chapter,
+        b.bid, b.name, b.author, b.update_time, b.introduction, b.state,
+        b.type, b.recommend_num, b.collect_num, b.issued_time, b.img_path, b.love_num
+        from bookshelf bs
+        left join user u on bs.bid = u.uid
+        left join book b on bs.bid = b.bid
+        where bs.uid = #{uid} and bs.bid = #{bid}
+    </select>
+
+    <update id="updateLastChapter">
+        update bookshelf
+        set last_chapter = #{chapterNum}
+        where uid = #{uid} and bid = #{bid}
+    </update>
 </mapper>

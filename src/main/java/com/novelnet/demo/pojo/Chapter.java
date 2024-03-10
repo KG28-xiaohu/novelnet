@@ -13,6 +13,7 @@ public class Chapter {
     private int cid;
     private int chapterNum;
     private String title;
+    private String content;
     private String collectTime;
     private Book book;
 }

@@ -15,7 +15,7 @@
                 type = #{type}
             </if>
             <if test="name != null and name != ''">
-                and name like %${name}%
+                and name like '%${name}%'
             </if>
         </where>
     </select>

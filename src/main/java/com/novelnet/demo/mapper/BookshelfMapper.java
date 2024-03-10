@@ -14,4 +14,7 @@ public interface BookshelfMapper {
     int deleteBook(@Param("uid") int uid, @Param("bid") int bid);
     //查看收藏的图书
     List<Bookshelf> getBookshelfByUid(@Param("uid") int uid);
+    Bookshelf getBookshelf(@Param("uid") int uid, @Param("bid") int bid);
+    //更新观看的书签页
+    int updateLastChapter(@Param("uid") int uid, @Param("bid") int bid, @Param("chapterNum") int chapterNum);
 }

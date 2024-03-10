@@ -40,4 +40,14 @@ public class BookshelfServiceImpl implements IBookshelfService {
     public boolean isHaveBookshelf(int uid, int bid) {
         return bookshelfMapper.isHaveBookshelf(uid, bid) != null;
     }
+
+    @Override
+    public Bookshelf getBookshelf(int uid, int bid) {
+        return bookshelfMapper.getBookshelf(uid, bid);
+    }
+
+    @Override
+    public int updateLastChapter(int uid, int bid, int chapterNum) {
+        return bookshelfMapper.updateLastChapter(uid, bid, chapterNum);
+    }
 }
