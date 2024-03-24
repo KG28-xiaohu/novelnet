@@ -3,10 +3,12 @@ package com.novelnet.demo.controller;
 import com.novelnet.demo.pojo.Result;
 import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
+import com.novelnet.demo.util.SendMail;
 import com.novelnet.demo.util.TokenUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.mail.MessagingException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -97,11 +99,32 @@ public class UserController {
      * 需要修改完成以后的用户作为参数，传参类型为JSON
      * 200-修改成功，400-修改失败
      */
-    @PutMapping("updateUser")
-    public Result updateUser(int uid, @RequestBody User user){
-        user.setUid(uid);
+    @PutMapping("/updateUser")
+    public Result updateUser(@RequestBody User user){
+        user.setUid(user.getUid());
         return iUserService.updateUser(user) > 0 ?
                 new Result(200, null, "updateUser OK!!!") :
                 new Result(400, null, "updateUser ERROR: 修改失败");
+    }
+
+    @GetMapping("/token/getUserById/{uid}")
+    public Result getUserById(@PathVariable int uid){
+        User user = iUserService.getUserById(uid);
+        return user != null ?
+                new Result(200, user, "updateUser OK!!!") :
+                new Result(400, null, "updateUser ERROR!");
+    }
+
+    @GetMapping("/mailboxVerification")
+    public Result mailboxVerification(@RequestParam("email") String email){
+        String verificationCode = null;
+        try {
+            verificationCode = SendMail.mailboxVerification(email);
+        } catch (MessagingException e) {
+            e.printStackTrace();
+        }
+        return verificationCode != null ?
+                new Result(200, verificationCode, "updateUser OK!!!") :
+                new Result(400, null, "updateUser ERROR!");
     }
 }

@@ -2,31 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c63f43cb-82dd-484e-9420-3d9ad76a0163" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_mail_javax_mail_1_6_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_activation_activation_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/util/Auth.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/util/SendMail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/util/Auth.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/util/SendMail.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/BookshelfController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/BookshelfController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/ChapterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/ChapterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/BookshelfMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/BookshelfMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/ChapterMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/ChapterMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/novelnet_demo.iml" beforeDir="false" afterPath="$PROJECT_DIR$/novelnet_demo.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/controller/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Bookshelf.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Bookshelf.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Chapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/Chapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/IBookshelfService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/IBookshelfService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/IChapterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/IChapterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/BookshelfServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/BookshelfServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/ChapterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/ChapterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookshelfMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/BookshelfMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/ChapterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/ChapterMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/controller/BookshelfController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/controller/BookshelfController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/controller/ChapterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/controller/ChapterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/BookMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/BookMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/BookshelfMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/BookshelfMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/BookshelfMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/BookshelfMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/ChapterMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/ChapterMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/ChapterMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/ChapterMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/IUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/IUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/novelnet/demo/service/impl/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/novelnet/demo/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/UserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/UserMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/Book.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/Book.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/Bookshelf.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/Bookshelf.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/Chapter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/Chapter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/IBookshelfService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/IBookshelfService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/IChapterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/IChapterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/impl/BookshelfServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/impl/BookshelfServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/impl/ChapterServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/impl/ChapterServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/IUserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/IUserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/impl/UserServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/novelnet/demo/service/impl/UserServiceImpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,6 +76,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="MERGE" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -104,7 +107,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/sql" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -203,7 +206,16 @@
       <workItem from="1709860892829" duration="45000" />
       <workItem from="1709861828094" duration="2391000" />
       <workItem from="1709962223725" duration="19761000" />
-      <workItem from="1710048948632" duration="12659000" />
+      <workItem from="1710048948632" duration="12951000" />
+      <workItem from="1710075629142" duration="151000" />
+      <workItem from="1710115992270" duration="57000" />
+      <workItem from="1710116063728" duration="1889000" />
+      <workItem from="1710141999360" duration="619000" />
+      <workItem from="1710212050283" duration="1832000" />
+      <workItem from="1710376824431" duration="22000" />
+      <workItem from="1711068867608" duration="2888000" />
+      <workItem from="1711168395609" duration="176000" />
+      <workItem from="1711264083748" duration="13258000" />
     </task>
     <task id="LOCAL-00001" summary="day20240227_01">
       <created>1709043500093</created>
@@ -310,7 +322,14 @@
       <option name="project" value="LOCAL" />
       <updated>1709999437296</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="day20240310_01">
+      <created>1710072578613</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1710072578613</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -332,7 +351,8 @@
     <MESSAGE value="day20240307_03" />
     <MESSAGE value="day20240309_01" />
     <MESSAGE value="day20240309_02" />
-    <option name="LAST_COMMIT_MESSAGE" value="day20240309_02" />
+    <MESSAGE value="day20240310_01" />
+    <option name="LAST_COMMIT_MESSAGE" value="day20240310_01" />
   </component>
   <component name="WindowStateProjectService">
     <state x="361" y="67" key="#Project_Structure" timestamp="1709998452354">
@@ -347,18 +367,18 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="423" y="71" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.816@0.0.1536.816" timestamp="1708953918342" />
-    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1710061839327">
+    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser" timestamp="1711270064674">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1710061839327" />
+    <state x="667" y="104" key="#com.intellij.ide.util.MemberChooser/0.0.1536.816@0.0.1536.816" timestamp="1711270064674" />
     <state x="583" y="271" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog" timestamp="1709381607433">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="583" y="271" key="#com.intellij.refactoring.move.moveInstanceMethod.MoveInstanceMethodDialog/0.0.1536.816@0.0.1536.816" timestamp="1709381607433" />
-    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1709999435550">
+    <state x="0" y="0" key="CommitChangelistDialog2" timestamp="1710072575985">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1709999435550" />
+    <state x="0" y="0" key="CommitChangelistDialog2/0.0.1536.816@0.0.1536.816" timestamp="1710072575985" />
     <state x="549" y="163" key="FileChooserDialogImpl" timestamp="1709187619336">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -371,38 +391,38 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="507" y="110" key="Github.UntrackedFilesDialog/0.0.1536.816@0.0.1536.816" timestamp="1709042091597" />
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.0.bottom" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
-    <state width="1493" height="146" key="GridCell.Tab.0.center" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.0.bottom/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
+    <state width="1493" height="214" key="GridCell.Tab.0.center" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
-    <state width="1493" height="146" key="GridCell.Tab.0.left" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.0.center/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
+    <state width="1493" height="214" key="GridCell.Tab.0.left" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
-    <state width="1493" height="146" key="GridCell.Tab.0.right" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.0.left/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
+    <state width="1493" height="214" key="GridCell.Tab.0.right" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
-    <state width="1493" height="146" key="GridCell.Tab.1.bottom" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.0.right/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
+    <state width="1493" height="214" key="GridCell.Tab.1.bottom" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
-    <state width="1493" height="146" key="GridCell.Tab.1.center" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.1.bottom/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
+    <state width="1493" height="214" key="GridCell.Tab.1.center" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
-    <state width="1493" height="146" key="GridCell.Tab.1.left" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.1.center/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
+    <state width="1493" height="214" key="GridCell.Tab.1.left" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
-    <state width="1493" height="146" key="GridCell.Tab.1.right" timestamp="1710071655936">
+    <state width="1493" height="214" key="GridCell.Tab.1.left/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
+    <state width="1493" height="214" key="GridCell.Tab.1.right" timestamp="1711287208015">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state width="1493" height="146" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1710071655936" />
+    <state width="1493" height="214" key="GridCell.Tab.1.right/0.0.1536.816@0.0.1536.816" timestamp="1711287208015" />
     <state x="290" y="142" key="IDE.errors.dialog" timestamp="1709195738211">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
@@ -419,22 +439,26 @@
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="270" y="0" key="SettingsEditor/0.0.1536.816@0.0.1536.816" timestamp="1709176632024" />
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1709999442787">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2" timestamp="1710072584162">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1709999442787" />
-    <state x="449" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1710049112009">
+    <state x="361" y="141" key="Vcs.Push.Dialog.v2/0.0.1536.816@0.0.1536.816" timestamp="1710072584162" />
+    <state x="449" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1711168567515">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="449" y="232" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1710049112009" />
+    <state x="449" y="232" key="com.intellij.ide.util.TipDialog/0.0.1536.816@0.0.1536.816" timestamp="1711168567515" />
+    <state x="359" y="252" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1711068902028">
+      <screen x="0" y="0" width="1536" height="816" />
+    </state>
+    <state x="359" y="252" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.816@0.0.1536.816" timestamp="1711068902028" />
     <state x="364" y="91" width="782" height="600" key="find.popup" timestamp="1708945393673">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
     <state x="364" y="91" width="782" height="600" key="find.popup/0.0.1536.816@0.0.1536.816" timestamp="1708945393673" />
-    <state x="437" y="185" key="git4idea.merge.GitPullDialog" timestamp="1710049118918">
+    <state x="437" y="185" key="git4idea.merge.GitPullDialog" timestamp="1711264224987">
       <screen x="0" y="0" width="1536" height="816" />
     </state>
-    <state x="437" y="185" key="git4idea.merge.GitPullDialog/0.0.1536.816@0.0.1536.816" timestamp="1710049118918" />
+    <state x="437" y="185" key="git4idea.merge.GitPullDialog/0.0.1536.816@0.0.1536.816" timestamp="1711264224987" />
     <state x="180" y="97" key="new project wizard" timestamp="1709187712829">
       <screen x="0" y="0" width="1536" height="816" />
     </state>

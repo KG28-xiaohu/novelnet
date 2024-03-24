@@ -3,13 +3,10 @@ import com.novelnet.demo.mapper.UserMapper;
 import com.novelnet.demo.pojo.User;
 import com.novelnet.demo.service.IUserService;
 import com.novelnet.demo.util.MD5Util;
-import com.novelnet.demo.util.TokenUtil;
-import jdk.nashorn.internal.objects.NativeJSON;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
-import javax.servlet.http.HttpSession;
-import java.util.HashMap;
-import java.util.Map;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 @Service
 public class UserServiceImpl implements IUserService {
@@ -31,6 +28,8 @@ public class UserServiceImpl implements IUserService {
         String password = user.getPassword();
         String newPassword = MD5Util.stringToMD5(password);
         user.setPassword(newPassword);
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        user.setEnrollTime(currentDateTime);
         int i1 = userMapper.enroll(user);
         if (i1 == 0){
             return 0;
@@ -64,5 +63,10 @@ public class UserServiceImpl implements IUserService {
     @Override
     public int updateUser(User user) {
         return userMapper.updateUser(user);
+    }
+
+    @Override
+    public User getUserById(int uid) {
+        return userMapper.getUserById(uid);
     }
 }

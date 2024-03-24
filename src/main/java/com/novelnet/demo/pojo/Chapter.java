@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,6 +16,6 @@ public class Chapter {
     private int chapterNum;
     private String title;
     private String content;
-    private String collectTime;
+    private LocalDateTime collectTime;
     private Book book;
 }

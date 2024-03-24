@@ -19,4 +19,6 @@ public interface UserMapper {
     User getUserNoPassword(@Param("uid") int uid);
     //修改用户信息
     int updateUser(@Param("user") User user);
+    //增加用户积分
+    int addUserIntegral(@Param("user") User user, @Param("num") int num);
 }

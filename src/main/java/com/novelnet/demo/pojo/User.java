@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Data
@@ -21,8 +23,8 @@ public class User {
     private String sex;
     private String qq;
     private String microblog;
-    private String enrollTime;
-    private String userIntegral;
+    private LocalDateTime enrollTime;
+    private int userIntegral;
     private int messageNum;
     private int bookMaxNum;
     private int collectTicketNum;

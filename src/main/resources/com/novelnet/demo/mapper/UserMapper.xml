@@ -26,7 +26,7 @@
     </update>
 
     <select id="getUserById" resultType="com.novelnet.demo.pojo.User">
-        select *
+        select uid, account, username, grade, email, sex, qq, microblog, enroll_time, user_integral, message_num, book_max_num, collect_ticket_num, personal_web
         from `user`
         where uid = #{uid}
     </select>
@@ -38,25 +38,13 @@
     </select>
 
     <update id="updateUser">
-        update `user` set account = #{user.account}
-        <if test="username != user.username">
-            , username = #{user.username}
-        </if>
-        <if test="email != user.email">
-            , email = #{user.email}
-        </if>
-        <if test="sex != user.sex">
-            , sex = #{user.sex}
-        </if>
-        <if test="qq != user.qq">
-            , qq = #{user.qq}
-        </if>
-        <if test="microblog != user.microblog">
-            , microblog = #{user.microblog}
-        </if>
-        <if test="personal_web != user.personalWeb">
-            , personal_web = #{user.personalWeb}
-        </if>
+        update `user` set account = #{user.account}, username = #{user.username}, email = #{user.email}
+        , sex = #{user.sex}, qq = #{user.qq}, microblog = #{user.microblog}, personal_web = #{user.personalWeb}
+        where uid = #{user.uid}
+    </update>
+
+    <update id="addUserIntegral">
+        update `user` set user_integral = #{user.userIntegral} + #{num}
         where uid = #{user.uid}
     </update>
 </mapper>

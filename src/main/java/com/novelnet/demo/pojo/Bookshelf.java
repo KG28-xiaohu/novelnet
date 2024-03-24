@@ -5,6 +5,8 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDateTime;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
@@ -12,6 +14,6 @@ import lombok.ToString;
 public class Bookshelf {
     private User user;
     private Book book;
-    private String collectTime;
+    private LocalDateTime collectTime;
     private int lastChapter;
 }

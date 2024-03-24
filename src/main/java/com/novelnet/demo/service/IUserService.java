@@ -18,4 +18,6 @@ public interface IUserService {
     User getUserNoPassword(int uid);
     //修改用户信息
     int updateUser(User user);
+    //获取用户信息
+    User getUserById(int uid);
 }
