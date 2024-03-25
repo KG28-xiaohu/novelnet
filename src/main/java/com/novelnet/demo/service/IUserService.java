@@ -20,4 +20,5 @@ public interface IUserService {
     int updateUser(User user);
     //获取用户信息
     User getUserById(int uid);
+    int addUserIntegral(User user, int num);
 }

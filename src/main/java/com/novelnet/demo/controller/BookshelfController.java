@@ -4,6 +4,7 @@ import com.novelnet.demo.pojo.Bookshelf;
 import com.novelnet.demo.pojo.Result;
 import com.novelnet.demo.service.IBookService;
 import com.novelnet.demo.service.IBookshelfService;
+import com.novelnet.demo.service.IUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +20,9 @@ public class BookshelfController {
     @Autowired
     private IBookService iBookService;
 
+    @Autowired
+    private IUserService iUserService;
+
     /**
      * 收藏图书的方法
      * 需要参数：bid-图书id
@@ -31,9 +35,12 @@ public class BookshelfController {
         if(iBookshelfService.isHaveBookshelf(uid, bid)){
             return new Result(403, null, "addBook ERROR: 重复收藏");
         }
-        return iBookshelfService.addBook(uid, bid) > 0 ?
-                new Result(201, null, "addBook OK!!!") :
-                new Result(400, null, "addBook ERROR: 收藏失败");
+        if(iBookshelfService.addBook(uid, bid) > 0){
+            iUserService.addUserIntegral(iUserService.getUserById(uid), 10);
+            return new Result(201, null, "addBook OK!!!");
+        }else {
+            return new Result(400, null, "addBook ERROR: 收藏失败");
+        }
     }
 
     /**

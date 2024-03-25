@@ -71,4 +71,9 @@ public class UserServiceImpl implements IUserService {
     public User getUserById(int uid) {
         return userMapper.getUserById(uid);
     }
+
+    @Override
+    public int addUserIntegral(User user, int num) {
+        return userMapper.addUserIntegral(user, num);
+    }
 }
