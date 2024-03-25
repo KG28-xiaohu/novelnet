@@ -29,7 +29,9 @@ public class UserServiceImpl implements IUserService {
         String newPassword = MD5Util.stringToMD5(password);
         user.setPassword(newPassword);
         LocalDateTime currentDateTime = LocalDateTime.now();
-        user.setEnrollTime(currentDateTime);
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        String formattedDateTime = currentDateTime.format(formatter);
+        user.setEnrollTime(formattedDateTime);
         int i1 = userMapper.enroll(user);
         if (i1 == 0){
             return 0;

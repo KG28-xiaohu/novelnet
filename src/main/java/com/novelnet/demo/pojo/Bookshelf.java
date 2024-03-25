@@ -14,6 +14,6 @@ import java.time.LocalDateTime;
 public class Bookshelf {
     private User user;
     private Book book;
-    private LocalDateTime collectTime;
+    private String collectTime;
     private int lastChapter;
 }

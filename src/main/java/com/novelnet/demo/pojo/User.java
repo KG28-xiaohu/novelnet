@@ -23,7 +23,7 @@ public class User {
     private String sex;
     private String qq;
     private String microblog;
-    private LocalDateTime enrollTime;
+    private String enrollTime;
     private int userIntegral;
     private int messageNum;
     private int bookMaxNum;

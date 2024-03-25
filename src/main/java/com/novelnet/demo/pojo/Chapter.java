@@ -16,6 +16,6 @@ public class Chapter {
     private int chapterNum;
     private String title;
     private String content;
-    private LocalDateTime collectTime;
+    private String collectTime;
     private Book book;
 }

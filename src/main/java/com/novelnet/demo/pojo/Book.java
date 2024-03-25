@@ -16,13 +16,13 @@ public class Book {
     private int bid;
     private String name;
     private String author;
-    private LocalDateTime updateTime;
+    private String updateTime;
     private String introduction;
     private String state;
     private String type;
     private String recommendNum;
     private String collectNum;
-    private LocalDateTime issuedTime;
+    private String issuedTime;
     private String imgPath;
     private int loveNum;
     private List<Chapter> chapters;
